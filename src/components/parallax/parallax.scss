@@ -1,0 +1,99 @@
+@import "../../app.scss";
+
+
+.parallax{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1{
+        font-size: 100px;
+        font-weight: bolder;
+        @include mobile{
+            font-size: 50px;
+        }
+    }
+    .landscape{
+        background-image: url('/mountains.png');
+        background-size: cover;
+        background-position: bottom;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 3;
+        @include mobile{
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    }
+    .drops{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .drop{
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background: transparent;
+        border-radius: 57% 43% 37% 63% / 45% 52% 48% 55%;
+        box-shadow: inset 10px 10px 10px rgba(0, 0, 0, 0.05), 
+                    15px 25px 10px rgba(0,0,0,0.1),
+                    15px 20px 20px rgba(0,0,0,0.05),
+                    inset -10px -10px 15px rgba(255,255,255,0.3),
+                    ;
+    }
+    .drop:nth-child(2){
+        transform: scale(0.5) translate(-200px, 180px);
+        border-radius: 64% 36% 42% 58% / 42% 37% 63% 58%;
+    }
+    .drop:nth-child(3){
+        transform: scale(0.3) translate(380px, 10px);
+        border-radius: 49% 51% 42% 58% / 56% 47% 53% 44%;
+    }
+    .drop:nth-child(4){
+        transform: scale(0.7) translate(-200px, -180px);
+        border-radius: 39% 61% 63% 37% / 56% 47% 53% 44%;
+    }
+    .drop:nth-child(5){
+        transform: scale(1.2) translate(-400px, -180px);
+        border-radius: 39% 61% 63% 37% / 56% 47% 53% 44%;
+    }
+    .drop:nth-child(6){
+        transform: scale(0.9) translate(-800px, -180px);
+        border-radius: 39% 61% 63% 37% / 56% 47% 53% 44%;
+    }
+    .drop:nth-child(7){
+        transform: scale(1.5) translate(-400px, -10px);
+        border-radius: 39% 61% 63% 37% / 56% 47% 53% 44%;
+    }
+    .drop:nth-child(8){
+        transform: scale(0.5) translate(-200px, -100px);
+        border-radius: 39% 61% 63% 37% / 56% 47% 53% 44%;
+    }
+    .drop:nth-child(9){
+        transform: scale(0.4) translate(-800px, 10px);
+        border-radius: 39% 61% 63% 37% / 56% 47% 53% 44%;
+    }
+    .drop:nth-child(10){
+        transform: scale(0.1) translate(-800px, -450px);
+        border-radius: 39% 61% 63% 37% / 56% 47% 53% 44%;
+    }
+    .drop:nth-child(11){
+        transform: scale(0.2) translate(-800px, 800px);
+        border-radius: 39% 61% 63% 37% / 56% 47% 53% 44%;
+    }
+    .planets{
+        background-image: url('/planets.png');
+        background-size: cover;
+        background-position: bottom;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+    }
+    overflow: hidden;
+}
